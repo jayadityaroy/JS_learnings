@@ -22,6 +22,17 @@ let user={
 // array: 
 let arr=[1,2,3,4,5];
 
-console.log(x);
-console.log(user);
-console.log(arr);
+console.log(age);
+console.log(user.name);
+console.log(arr[1]);
+console.log(typeof nullValue); // object
+
+/**
+ * JavaScript is a dynamically typed language, which means that variables can hold values of any type and the type can change at runtime. This allows for flexibility but also requires careful handling to avoid type-related errors.
+ */
+let variable;
+console.log(typeof variable); // undefined
+variable = "Hello";
+console.log(typeof variable); // string
+variable = 42;
+console.log(typeof variable); // number
