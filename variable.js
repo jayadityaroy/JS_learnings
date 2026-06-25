@@ -1,6 +1,6 @@
 // variable: a container for storing data values
 // can create a variable using var, let, or const keywords
-// var: can be re-assigned and re-declared, has function scope, not recomended
+// var: can be re-assigned and re-declared, has function scope, not recommended, variables declared inside a block are accessible outside of it
 // let: can be re-assigned but not re-declared, has block scope
 // const: cannot be re-assigned or re-declared, has block scope
 
