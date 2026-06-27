@@ -1,4 +1,5 @@
-// Functions:
+// Functions: 
+// in js they are a objects, so they can be assigned to variables, passed as arguments to other functions, and returned from other functions.
 
 function myFunction() {
     console.log("Hello World!");
@@ -45,3 +46,25 @@ function displayType(value){
 displayType(42); // Type of 42 is number
 displayType("Hello"); // Type of Hello is string
 displayType(true); // Type of true is boolean
+
+// function with return value
+function giveUserInfo(name, age){
+    // returning an object with name and age properties
+    return {
+        userName: name,
+        userAge: age
+    }
+}
+console.log(`calling giveUserInfo() with parameters: `);
+let {userName, userAge} = giveUserInfo("Bobby", 30); // destructuring the returned object
+console.log(`User Info: Name - ${userName}, Age - ${userAge}.`); // User Info: Name - Bob, Age - 30.
+
+// Function Expression
+// here we are assigning a an anonymous function to a variable called multiply.
+// we can't use the multiply variable before the function expression is defined (unlike function declarations), 
+// because of hoisting. Function expressions are not hoisted.
+const multiply = function(a, b) {
+    return a * b;
+}
+console.log(`calling using multiply() function expression: `);
+console.log(`multiply(2, 3): ${multiply(2, 3)}`); // multiply(2, 3): 6
