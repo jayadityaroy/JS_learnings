@@ -68,3 +68,9 @@ const multiply = function(a, b) {
 }
 console.log(`calling using multiply() function expression: `);
 console.log(`multiply(2, 3): ${multiply(2, 3)}`); // multiply(2, 3): 6
+
+// Arrow Functions
+// Arrow functions are a more concise way to write functions in JavaScript. They are always anonymous and change the way this binds in functions.
+const divide = (a, b) => a / b; // returns the result of a / b
+console.log(`calling using divide() arrow function: `);
+console.log(`divide(6, 2): ${divide(6, 2)}`); // divide(6, 2): 3
