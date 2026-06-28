@@ -74,3 +74,16 @@ console.log(`multiply(2, 3): ${multiply(2, 3)}`); // multiply(2, 3): 6
 const divide = (a, b) => a / b; // returns the result of a / b
 console.log(`calling using divide() arrow function: `);
 console.log(`divide(6, 2): ${divide(6, 2)}`); // divide(6, 2): 3
+
+// Functions in an object
+const calculator = {
+    add: function(a, b) {
+        return a + b;
+    },
+    subtract: function(a, b) {
+        return a - b;
+    }
+};
+console.log(`calling calculator.add() and calculator.subtract(): `);
+console.log(`calculator.add(5, 3): ${calculator.add(5, 3)}`); // calculator.add(5, 3): 8
+console.log(`calculator.subtract(5, 3): ${calculator.subtract(5, 3)}`); // calculator.subtract(5, 3): 2

@@ -26,3 +26,12 @@ let slicedNumbers = numbers.slice(1, 4);
 console.log("Sliced numbers (1, 4):", slicedNumbers); // Sliced numbers (1, 4): [20, 30, 40]
 fruits.splice(2, 1, "blueberry"); // 2 is the index to start at, 1 is the number of elements to remove, and "blueberry" is the element to add
 console.log("Fruits after splice:", fruits);  // ["avocado", "banana", "blueberry", "date", "dingle berry"]
+
+// map: creates a new array populated with the results of calling a provided function on every element in the calling array
+let doubledNumbers = numbers.map(function(nums){
+    return nums*2;
+});
+console.log("Doubled numbers:", doubledNumbers);  // [20, 40, 60, 80, 100]
+// can also pass the already defined function to map
+// can also use arrow function syntax for map:
+// let squaredNumbers = numbers.map((nums) => nums * nums);

@@ -7,6 +7,10 @@ let person = {
     greet: function() {
         console.log("Hello, my name is " + this.name);
     }
+    // shorthand method definition (ES6):
+    // greet() {
+    //     console.log("Hello, my name is " + this.name);
+    // }
 }
 
 console.log(person); // { name: 'John', age: 30, isStudent: true, greet: [Function: greet] }
@@ -21,6 +25,12 @@ console.log(typeof person); // object
 person.age = 31; // updating existing property
 person.gender = "male"; // adding new property
 console.log(person); // { name: 'John', age: 31, isStudent: true, greet: [Function: greet], gender: 'male' }
+// dynamically adding methods to an object:
+person.sayGoodbye = function() {
+    console.log("Goodbye!");
+}
+person.sayGoodbye(); // Goodbye!
+
 
 // deleting properties:
 person.willBeDeleted = "This property will be deleted";
