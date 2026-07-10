@@ -21,7 +21,7 @@ function fetchDataFromServer(){
 }
 
 fetchDataFromServer();
-
+/*---------------------------------------------------------------------------------------------------------------------*/
 // with callback, the code execution can be asynchronous, allowing for non-blocking behavior.
 // In this example, the serverWithCallback function takes a callback function as an argument.
 // After a delay, it calls the callback function (fetchDataFromServerWithCallback) with the fetched data.
@@ -35,3 +35,36 @@ function fetchDataFromServerWithCallback(data){
     console.log(data); // This will log "Data fetched" after the delay
 }
 serverWithCallback(fetchDataFromServerWithCallback); // The fetchDataFromServerWithCallback function is passed as a callback to the serverWithCallback function
+// or directly as an anonymous function
+// serverWithCallback((data) => {
+//     console.log(data); // This will also log "Data fetched" after the delay
+// })
+/*---------------------------------------------------------------------------------------------------------------------*/
+// multiple callbacks can used to handle different situtations like success and error handling.
+// Example:
+function serverWithMultipleCallbacks(successCallback, errorCallback){
+    setTimeout(() => {
+        const isSuccess = Math.random() > 0.5; // Randomly determine if the operation is successful
+        if (isSuccess) {
+            successCallback("Data fetched successfully"); // Call the success callback with the fetched data
+        } else {
+            errorCallback("Error fetching data"); // Call the error callback with an error message
+        }
+    }, 2000);
+}
+serverWithMultipleCallbacks(
+    (data) => {
+        console.log("Success:", data); // This will log the success message if the operation is successful
+    },
+    (error) => {
+        console.error("Error:", error); // This will log the error message if the operation fails
+    }
+)
+/*---------------------------------------------------------------------------------------------------------------------*/
+// callback hell is a situation where multiple nested callbacks are used, leading to code that is difficult to read and maintain.
+// Not recommended to use multiple nested callbacks, instead use promises or async/await for better readability and maintainability.
+/*---------------------------------------------------------------------------------------------------------------------*/
+// callback in array methods like forEach, map, filter, reduce, etc. are used to perform operations on each element of an array.
+const numbers = [1, 2, 3, 4, 5];
+const squares = numbers.map((number) => number * number); // The callback function takes each number and returns its square
+console.log(squares); // This will log [1, 4, 9, 16, 25] to the console
